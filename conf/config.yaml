@@ -1,0 +1,32 @@
+name: "bluebell"
+version: "v0.0.1"
+mode: "dev" # release test 
+port: 8080
+start_time: "2025-01-01"
+machine_id: 1
+
+log:
+  level: "debug"
+  filename: "web_app.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: "127.0.0.1"   # 本机运行
+  # host: mysql8019       # docker 部署
+  port: 3306
+  user: "root"
+  password: "xxxxx"
+  dbname: "bluebell"
+  max_open_conns: 200
+  max_idle_conns: 50 
+
+
+redis:
+  host: "127.0.0.1"
+  # host: redis507 
+  port: 6379
+  db: 0
+  password: "" 
+  pool_size: 100
